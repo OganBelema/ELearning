@@ -11,9 +11,9 @@ import com.oganbelema.database.entity.SubjectEntity
 import com.oganbelema.database.entity.TopicEntity
 import com.oganbelema.elearning.factory.SubjectFactory
 import com.oganbelema.elearning.factory.TopicFactory
-import junit.framework.Assert.assertEquals
 import kotlinx.coroutines.runBlocking
 import org.junit.After
+import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -63,9 +63,9 @@ class AppDatabaseTest {
     @Test
     fun testTopicDaoOperations() = runBlocking {
         //assertThat topic table has no data
-        assertEquals(emptyList<SubjectEntity>(), subjectDao.subjects())
+        assertEquals(emptyList<TopicEntity>(), topicDao.topics())
 
-        //create sample subjectEntities
+        //create sample topicEntities
         val topicEntity1 = TopicFactory.makeTopicEntity()
         val topicEntity2 = TopicFactory.makeTopicEntity()
 
