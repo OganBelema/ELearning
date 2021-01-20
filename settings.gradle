@@ -1,0 +1,4 @@
+include ':database'
+include ':network'
+include ':app'
+rootProject.name = "ELearning"

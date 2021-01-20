@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="6dp"
+    android:background="@android:color/transparent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/topicImage"
+        android:layout_width="120dp"
+        android:layout_height="80dp"
+        android:background="@drawable/card_background"
+        android:contentDescription="@string/topic_image"
+        tools:src="@tools:sample/avatars"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <ImageView
+        android:id="@+id/playIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_play_small"
+        android:contentDescription="@string/play_icon"
+        app:layout_constraintStart_toStartOf="@+id/topicImage"
+        app:layout_constraintBottom_toBottomOf="@+id/topicImage"
+        app:layout_constraintEnd_toEndOf="@+id/topicImage"
+        app:layout_constraintTop_toTopOf="@+id/topicImage"/>
+
+    <TextView
+        android:id="@+id/subjectNameTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:fontFamily="@font/mulish_regular"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/topicImage"
+        app:layout_constraintTop_toTopOf="@+id/topicImage"
+        app:layout_constraintBottom_toTopOf="@+id/topicName"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="Biology"
+        tools:textColor="@color/text_black" />
+
+    <TextView
+        android:id="@+id/topicName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/text_black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/subjectNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/subjectNameTv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

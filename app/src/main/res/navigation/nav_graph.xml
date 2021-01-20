@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.oganbelema.elearning.ui.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard" >
+        <action
+            android:id="@+id/action_dashboardFragment_to_subjectFragment"
+            app:destination="@id/subjectFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/subjectFragment"
+        android:name="com.oganbelema.elearning.ui.SubjectFragment"
+        android:label="SubjectFragment" >
+        <argument
+            android:name="subject"
+            app:argType="com.oganbelema.network.model.Subject"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_subjectFragment_to_videoPlayerFragment"
+            app:destination="@id/videoPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/videoPlayerFragment"
+        android:name="com.oganbelema.elearning.ui.VideoPlayerFragment"
+        android:label="VideoPlayerFragment" >
+        <argument
+            android:name="lesson"
+            app:argType="com.oganbelema.network.model.Lesson"
+            app:nullable="true"
+            android:defaultValue="@null" />
+        <argument
+            android:name="subjectName"
+            app:argType="string"
+            app:nullable="true" />
+        <argument
+            android:name="topic"
+            app:argType="com.oganbelema.elearning.data.Topic"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

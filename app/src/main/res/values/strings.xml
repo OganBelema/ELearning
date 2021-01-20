@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ELearning</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_simi">Hello Simi</string>
+    <string name="hand_image">hand image</string>
+    <string name="media_background">Media background</string>
+    <string name="recently_watched_topics">Recently watched topics</string>
+    <string name="view_all">View all</string>
+    <string name="show_less">Show less</string>
+    <string name="back_arrow">Back arrow</string>
+    <string name="lesson_image">Lesson image</string>
+    <string name="please_wait">Please wait</string>
+    <string name="no_subjects">No Subjects</string>
+    <string name="topic_image">Topic image</string>
+    <string name="play_icon">Play icon</string>
+</resources>
