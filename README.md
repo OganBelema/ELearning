@@ -6,6 +6,7 @@ Contains:
 - Dependency injection with dagger
 - Modular clean architecture
 - DiffUtil to update recyclerview
+- Exoplayer with custom controller to play video
 - Coroutines for multithreading
 - Retrofit for network calls
 - Glide to display images
@@ -13,7 +14,7 @@ Contains:
 - Mappers for mapping different entities from the different modules
 - Android viewBinding library
 - Unit test for mappers
-- ViewModel text
+- ViewModel test
 - Room coroutine test
 
 
