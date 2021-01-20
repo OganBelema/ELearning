@@ -62,6 +62,7 @@ class TopicMapperTest {
         assertEquals(entity?.lessonName, model?.lessonName)
         assertEquals(entity?.lessonMediaUrl, model?.lessonMediaUrl)
         assertEquals(entity?.subjectName, model?.subjectName)
+        assertEquals(entity?.chapterName, model?.chapterName)
         assertEquals(entity?.date, model?.date)
     }
 }

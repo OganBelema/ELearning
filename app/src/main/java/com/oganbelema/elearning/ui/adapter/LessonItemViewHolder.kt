@@ -15,13 +15,14 @@ import com.oganbelema.network.model.Lesson
 class LessonItemViewHolder(private val lessonItemBinding: LessonItemBinding):
     RecyclerView.ViewHolder(lessonItemBinding.root) {
 
-    fun bind(clickListener: (lesson: Lesson?) -> Unit,lesson: Lesson?){
+    fun bind(clickListener: (lesson: Lesson?, chapterName: String?) -> Unit,lesson: Lesson?,
+             chapterName: String?){
         lessonItemBinding.lessonNameTv.text = lesson?.name ?: ""
         Glide.with(lessonItemBinding.root.context).load(lesson?.mediaURL)
             .placeholder(R.drawable.rotate_spinner)
             .into(lessonItemBinding.lessonIconIv)
         lessonItemBinding.root.setOnClickListener {
-            clickListener(lesson)
+            clickListener(lesson, chapterName)
         }
     }
 

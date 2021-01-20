@@ -12,6 +12,7 @@ data class Topic (
     val lessonId: Long,
     val lessonName: String,
     val subjectName: String,
+    val chapterName: String,
     val lessonMediaUrl: String,
     var date: Date
 ): Parcelable

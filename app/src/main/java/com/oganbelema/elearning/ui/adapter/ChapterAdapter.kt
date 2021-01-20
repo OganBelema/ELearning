@@ -9,7 +9,7 @@ import com.oganbelema.network.model.Lesson
 /**
  * Created by Belema Ogan on 1/15/21.
  */
-class ChapterAdapter(private val clickListener: (lesson: Lesson?) -> Unit):
+class ChapterAdapter(private val clickListener: (lesson: Lesson?, chapterName: String?) -> Unit):
     RecyclerView.Adapter<ChapterItemViewHolder>() {
 
     private var chapters: List<Chapter>? = arrayListOf()

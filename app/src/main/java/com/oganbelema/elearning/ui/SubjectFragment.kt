@@ -39,9 +39,10 @@ class SubjectFragment : Fragment() {
 
         val subject = args.subject
 
-        chapterAdapter = ChapterAdapter { lesson ->
+        chapterAdapter = ChapterAdapter { lesson, chapterName ->
             findNavController().navigate(SubjectFragmentDirections
-                .actionSubjectFragmentToVideoPlayerFragment(lesson, subject?.name))
+                .actionSubjectFragmentToVideoPlayerFragment(lesson, subject?.name, null,
+                    chapterName))
         }
 
         fragmentSubjectBinding.chaptersRv.layoutManager = LinearLayoutManager(context)

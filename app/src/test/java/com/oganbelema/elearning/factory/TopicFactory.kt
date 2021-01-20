@@ -12,14 +12,14 @@ object TopicFactory {
     fun makeTopicEntity(): TopicEntity {
         return with(DataFactory){
             TopicEntity(randomLong(), randomString(), randomString(),
-                randomString(), currentDate())
+                randomString(), randomString(), currentDate())
         }
     }
 
     fun makeTopic(): Topic {
         return  with(DataFactory){
             Topic(randomLong(), randomString(), randomString(),
-                randomString(), currentDate())
+                randomString(), randomString(), currentDate())
         }
     }
 }

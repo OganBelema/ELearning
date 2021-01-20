@@ -21,6 +21,8 @@ data class TopicEntity (
     val lessonName: String,
     @ColumnInfo(name = "subject_name")
     val subjectName: String,
+    @ColumnInfo(name = "chapter_name")
+    val chapterName: String,
     @ColumnInfo(name = "lesson_media_url")
     val lessonMediaUrl: String,
     @ColumnInfo(name = "date")

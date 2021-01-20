@@ -19,6 +19,7 @@ import com.google.android.exoplayer2.trackselection.AdaptiveTrackSelection
 import com.google.android.exoplayer2.trackselection.DefaultTrackSelector
 import com.google.android.exoplayer2.trackselection.TrackSelectionArray
 import com.google.android.exoplayer2.trackselection.TrackSelector
+import com.google.android.exoplayer2.ui.AspectRatioFrameLayout
 import com.google.android.exoplayer2.upstream.BandwidthMeter
 import com.google.android.exoplayer2.upstream.DefaultBandwidthMeter
 import com.google.android.exoplayer2.upstream.DefaultHttpDataSourceFactory
@@ -80,16 +81,21 @@ class VideoPlayerFragment : Fragment() {
 
         val subjectName = args.subjectName
 
+        val chapterName = args.chapterName
+
         if (lesson != null) {
             fragmentVideoPlayerBinding.lessonNameTv.text = lesson.name
+            fragmentVideoPlayerBinding.chapterNameTv.text = chapterName
             videoUri = Uri.parse(lesson.mediaURL)
 
-            if (subjectName != null) {
-                val topicToSave = Topic(lesson.id, lesson.name, subjectName, lesson.mediaURL, Date())
+            if (subjectName != null && chapterName != null) {
+                val topicToSave = Topic(lesson.id, lesson.name, subjectName, chapterName,
+                    lesson.mediaURL, Date())
                 videoPlayerViewModel.saveTopic(topicToSave)
             }
         } else if (topic != null) {
             fragmentVideoPlayerBinding.lessonNameTv.text = topic.lessonName
+            fragmentVideoPlayerBinding.chapterNameTv.text = topic.chapterName
             videoUri = Uri.parse(topic.lessonMediaUrl)
             topic.date = Date()
             videoPlayerViewModel.saveTopic(topic)
@@ -117,6 +123,9 @@ class VideoPlayerFragment : Fragment() {
         fragmentVideoPlayerBinding.playerView.player = simpleExoPlayer
 
         fragmentVideoPlayerBinding.playerView.keepScreenOn = true
+
+        fragmentVideoPlayerBinding.playerView.setResizeMode(AspectRatioFrameLayout.RESIZE_MODE_FIT)
+        simpleExoPlayer?.videoScalingMode = C.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING
 
         simpleExoPlayer?.prepare(mediaSource)
 

@@ -5,7 +5,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".ui.VideoPlayerFragment">
+
+    <ImageView
+        android:id="@+id/mediaBackground"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/media_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/ic_media_background" />
 
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/playerView"
@@ -16,6 +26,7 @@
         app:rewind_increment="10000"
         app:fastforward_increment="10000"
         app:use_controller="true"
+        android:background="@color/black"
         app:controller_layout_id="@layout/custom_controller"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -32,21 +43,36 @@
         android:contentDescription="@string/back_arrow"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_back_arrow" />
+        app:srcCompat="@drawable/ic_back_arrow_white" />
 
     <TextView
-        android:id="@+id/lessonNameTv"
-        android:layout_width="wrap_content"
+        android:id="@+id/chapterNameTv"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="24dp"
         android:fontFamily="@font/mulish_regular"
-        android:textSize="20sp"
         android:textColor="@color/text_black"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerView"
         tools:text="The number line representation" />
+
+    <TextView
+        android:id="@+id/lessonNameTv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/mulish_regular"
+        android:textColor="@color/text_black"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/chapterNameTv"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/chapterNameTv"
+        app:layout_constraintTop_toBottomOf="@+id/chapterNameTv"
+        tools:text="Rational numbers" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -69,7 +69,7 @@ class DashboardFragment : Fragment() {
 
         val topicAdapter = TopicAdapter { topic ->
             findNavController().navigate(DashboardFragmentDirections
-                .actionDashboardFragmentToVideoPlayerFragment(null, topic?.subjectName, topic))
+                .actionDashboardFragmentToVideoPlayerFragment(null, topic?.subjectName, topic, topic?.chapterName))
         }
 
         fragmentDashboardBinding.subjectRv.layoutManager = GridLayoutManager(context, 2)

@@ -8,8 +8,8 @@ import com.oganbelema.network.model.Lesson
 /**
  * Created by Belema Ogan on 1/15/21.
  */
-class LessonAdapter(private val clickListener: (lesson: Lesson?) -> Unit):
-    RecyclerView.Adapter<LessonItemViewHolder>() {
+class LessonAdapter(private val clickListener: (lesson: Lesson?, chapterName: String?) -> Unit,
+                    private val chapterName: String?): RecyclerView.Adapter<LessonItemViewHolder>() {
 
     private var lessons: List<Lesson>? = arrayListOf()
 
@@ -28,6 +28,6 @@ class LessonAdapter(private val clickListener: (lesson: Lesson?) -> Unit):
     }
 
     override fun onBindViewHolder(holder: LessonItemViewHolder, position: Int) {
-        holder.bind(clickListener, lessons?.get(position))
+        holder.bind(clickListener, lessons?.get(position), chapterName)
     }
 }

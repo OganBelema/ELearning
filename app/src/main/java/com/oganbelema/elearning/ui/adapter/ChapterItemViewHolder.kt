@@ -15,9 +15,9 @@ import com.oganbelema.network.model.Lesson
 class ChapterItemViewHolder(private val chapterItemBinding: ChapterItemBinding):
     RecyclerView.ViewHolder(chapterItemBinding.root) {
 
-    fun bind(clickListener: (lesson: Lesson?) -> Unit, chapter: Chapter?){
+    fun bind(clickListener: (lesson: Lesson?, chapterName: String?) -> Unit, chapter: Chapter?){
         chapterItemBinding.chapterNameTv.text = chapter?.name ?: ""
-        val adapter = LessonAdapter(clickListener)
+        val adapter = LessonAdapter(clickListener, chapter?.name)
         adapter.setData(chapter?.lessons)
         chapterItemBinding.lessonsRv.layoutManager = LinearLayoutManager(
             chapterItemBinding.root.context, LinearLayoutManager.HORIZONTAL, false)

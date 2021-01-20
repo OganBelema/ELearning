@@ -10,13 +10,13 @@ import javax.inject.Inject
 class TopicMapper @Inject constructor(): EntityMapper<TopicEntity, Topic> {
 
     override fun fromEntity(entity: TopicEntity): Topic {
-        return Topic(entity.lessonId, entity.lessonName, entity.subjectName, entity.lessonMediaUrl,
-        entity.date)
+        return Topic(entity.lessonId, entity.lessonName, entity.subjectName, entity.chapterName,
+            entity.lessonMediaUrl, entity.date)
     }
 
     override fun toEntity(model: Topic): TopicEntity {
-        return TopicEntity(model.lessonId, model.lessonName, model.subjectName, model.lessonMediaUrl,
-        model.date)
+        return TopicEntity(model.lessonId, model.lessonName, model.subjectName, model.chapterName,
+            model.lessonMediaUrl, model.date)
     }
 
     override fun fromEntityList(entities: List<TopicEntity>?): List<Topic>? {
