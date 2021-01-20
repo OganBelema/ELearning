@@ -18,12 +18,12 @@ Contains:
 
 
 <p float="left">
-  <img src="screenshots/Screenshot_20210120-103745.png" width="200" height="400">
-  <img src="screenshots/Screenshot_20210120-103807.png" width="200" height="400">
-  <img src="screenshots/Screenshot_20210120-103830.png" width="200" height="400">
-  <img src="screenshots/Screenshot_20210120-103841.png" width="200" height="400">
-  <img src="screenshots/Screenshot_20210120-103847.png" width="200" height="400">
-  <img src="screenshots/Screenshot_20210120-103917.png" width="200" height="400">
-  <img src="screenshots/Screenshot_20210120-134138.png" width="200" height="400">
-  <img src="screenshots/Screenshot_20210120-135020.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-103745.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-103807.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-103830.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-103841.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-103847.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-103917.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-134138.png" width="200" height="400">
+  <img src="Screenshots/Screenshot_20210120-135020.png" width="200" height="400">
 </p>
